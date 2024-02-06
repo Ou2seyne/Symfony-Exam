@@ -6,6 +6,12 @@
  <div class="col-10 text-primary">
 <h1 class="text-center text-primary mt-4 pt-4 display-1 fw-bold"> Ajout de produit !</h1>
 {{ form(form) }}
+{% for message in app.flashes('success') %}
+    <div class="alert alert-success text-center mt-4 mb-4" role="alert">
+        {{ message }}
+    </div>
+{% endfor %}
+
 </div>
  </div>
 </div>
